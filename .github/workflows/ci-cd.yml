@@ -30,6 +30,11 @@ jobs:
           poetry install
         working-directory: ./app
 
+      - name: Run tests
+        run: |
+          poetry run pytest
+        working-directory: ./app
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
